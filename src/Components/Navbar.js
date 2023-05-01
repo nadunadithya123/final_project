@@ -16,8 +16,10 @@ import InfoIcon from "@mui/icons-material/Info";
 import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [openMenu, setOpenMenu] = useState(false);
   const menuOptions = [
     {
@@ -55,7 +57,17 @@ const Navbar = () => {
         <a href="">
           <BsCart2 className="navbar-cart-icon" />
         </a> */}
-        <button className="primary-button">Login/Register</button>
+        <Link
+          to="/login"
+          onClick={() => {
+            if (localStorage.getItem("token")) {
+              localStorage.removeItem("token");
+            }
+          }}
+          className="primary-button"
+        >
+          {localStorage.getItem("token") ? "Login/Register" : "Logout"}
+        </Link>
       </div>
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
