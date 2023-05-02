@@ -50,9 +50,9 @@ const Navbar = () => {
         <h1>Disease Detective</h1>
       </div>
       <div className="navbar-links-container">
-        <a href="">Home</a>
+        <a href="/">Home</a>
         <a href="">Predict Disease</a>
-        <a href="">News</a>
+        <a href="/news">News</a>
         {/* <a href="">Contact</a>
         <a href="">
           <BsCart2 className="navbar-cart-icon" />

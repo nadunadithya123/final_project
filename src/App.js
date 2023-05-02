@@ -18,6 +18,7 @@ import HomePage from "./Pages/HomePage";
 import Login from "./Pages/Login";
 import "./index.css";
 import SignUp from "./Pages/SignUp";
+import News from "./Pages/News";
 
 const ProtectedRoute = () => {
   const isAuthenticated = localStorage.getItem("token");
@@ -36,12 +37,14 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<ProtectedRoute />}>
-            <Route path="/" element={<HomePage />} />
+          <Route path="/news" element={<News />} />
+
           </Route>
           <Route element={<CheckLoginRoute />}>
             <Route path="/login" element={<Login />} />
             <Route path="/create-account" element={<SignUp />} />
           </Route>
+          <Route path="/" element={<HomePage />} />
         </Routes>
       </BrowserRouter>
     </div>
