@@ -40,7 +40,7 @@ const News = () => {
     getNews();
   }, []);
   return (
-    <div className="home-container">
+    <div className="home-container home">
       <Navbar />
       <div className="home-banner-container">
         <div className="home-bannerImage-container">

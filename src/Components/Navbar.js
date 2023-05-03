@@ -43,6 +43,7 @@ const Navbar = () => {
       icon: <ShoppingCartRoundedIcon />,
     },
   ];
+  console.log(localStorage.getItem("token"));
   return (
     <nav>
       <div className="nav-logo-container">
@@ -51,7 +52,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-links-container">
         <a href="/">Home</a>
-        <a href="">Predict Disease</a>
+        <a href="/">Predict Disease</a>
         <a href="/news">News</a>
         {/* <a href="">Contact</a>
         <a href="">
@@ -66,7 +67,7 @@ const Navbar = () => {
           }}
           className="primary-button"
         >
-          {localStorage.getItem("token") ? "Login/Register" : "Logout"}
+          {localStorage.getItem("token") ? "Logout" : "Login/Register"}
         </Link>
       </div>
       <div className="navbar-menu-container">

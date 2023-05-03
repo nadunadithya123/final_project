@@ -33,12 +33,11 @@ const CheckLoginRoute = () => {
 
 function App() {
   return (
-    <div className="App">
+    <div className="">
       <BrowserRouter>
         <Routes>
           <Route element={<ProtectedRoute />}>
-          <Route path="/news" element={<News />} />
-
+            <Route path="/news" element={<News />} />
           </Route>
           <Route element={<CheckLoginRoute />}>
             <Route path="/login" element={<Login />} />

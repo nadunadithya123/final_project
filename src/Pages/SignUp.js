@@ -40,7 +40,7 @@ const SignUp = () => {
 
   console.log(userData);
   return (
-    <div className="w-screen h-screen">
+    <div className="w-screen h-screen  px-36">
       <Navbar />
       <div
         style={{

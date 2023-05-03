@@ -8,7 +8,7 @@ img {
   max-width: 100%;
   height: auto;
 }
-.App {
+.home {
   min-height: 100vh;
   width: 85vw;
   max-width: 1900px;
@@ -112,7 +112,7 @@ nav {
 }
 .secondary-button1 {
   padding: 1rem 2.5rem;
-  background-color:green;
+  background-color: green;
   outline: none;
   border: none;
   border-radius: 5rem;
